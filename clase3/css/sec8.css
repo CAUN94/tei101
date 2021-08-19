@@ -1,0 +1,55 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** Reset rems **/
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 5rem;
+    margin: 2rem;
+    line-height: 0.7;
+    background-color: chartreuse;
+}
+
+h1 {
+    font-size: 20rem;
+    margin: 0;
+    padding: 0;
+
+}
+
+p {
+    padding: 10rem;
+    background-color: brown;
+    font-weight: 800;
+    color: white;
+    width: 70%;
+}
+
+ul {
+    background-color: dodgerblue;
+    width: 30%;
+    padding-top: 10rem;
+    
+}
+
+li {
+    list-style-type: none;
+}
+
+.division{
+    background-color: darkgoldenrod;
+    display: flex;
+}
+
+.division:hover{
+    background-color: white;
+    display: block;
+    font-size: 10px;
+}
+
+p:hover {
+    background-color: yellow;
+}
