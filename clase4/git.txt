@@ -1,0 +1,12 @@
+mkdir <name>  // Crear Carpeta
+cd <name>  // Entrar en Carpeta
+git init  // inicializar el repositorio.
+git add .  // agregar todos los archivos que hemos modificado desde el último respaldo en el área de preparación (Staging).
+git status  // te muestra todos los archivos que hemos modificado desde nuestro último respaldo y los que  ya hemos agregado al área de preparación (Staging).
+git commit -m "..."  // confirma los cambios en el repositorio.
+git log  // muestra todos los respaldos creados en el repositorio.
+git blame ____  //  muestra quién escribió que línea de código en otras palabras quien es culpable de una línea de código en particular.
+git remote add origin ____  // le dice a Git que agregue un lugar remoto llamado 'origin' (origen) usando la URL remota ____.
+git push  // empuja los cambios de tu repositorio local al repositorio remoto.
+git pull  // baja los cambios desde el repositorio remoto a tu repositorio local.
+git clone ___  // clona un repositorio remoto en ___  a tu propia carpeta local.

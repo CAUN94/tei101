@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.row {
+  display: -webkit-flex; /* Esto hace que funcione en Internet Explorer */
+  display: flex;
+}
+
+.column {
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.column.side {
+   -webkit-flex: 1; /* Esto hace que funcione en Internet Explorer */
+   -ms-flex: 1; /* Esto hace que funcione en Internet Explorer */
+   flex: 1;
+}
+
+.column.middle {
+  -webkit-flex: 2; /* Esto hace que funcione en Internet Explorer */
+  -ms-flex: 2; /* Esto hace que funcione en Internet Explorer */
+  flex: 2;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
