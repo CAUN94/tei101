@@ -1,0 +1,32 @@
+#Revisar que tengo instalado y funcionando python
+python
+o
+pytthon3
+
+#Resultado de imagen para ambiente virtual python
+#Un entorno de desarrollo virtual python o simplemente entorno virtual #python es un mecanismo que me permite gestionar programas y paquetes python
+
+#Creemos un entorno virtual llamado py3env (pueden llamarlo como quieran)
+python3 -m venv py3Env 
+o 
+python -m venv py3Env 
+
+#Activemos el entorno virtual (en este caso tiene nombre py3Env)
+source py3Env/bin/activate
+o
+call py3Env\Scripts\activate    
+
+#Para desactivar el entorno virtual (en este caso tiene nombre py3Env)
+source py3Env/bin/deactivate
+o
+call py3Env\Scripts\deactivate    
+
+#Instalemos flask ahora que tenemos el entorno virtual activado
+pip install Flask
+
+#Creemos nuestro primer Hola Mundo en Flask
+Revisar el archivo helloworld_example.py
+
+#Para hacer funcionar nuestro primer codigo use
+python (nombre del archivo)
+python helloworld.py
