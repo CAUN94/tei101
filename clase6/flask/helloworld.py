@@ -1,33 +1,33 @@
 from flask import Flask, render_template, request, redirect
 
-app = Flask(__name__)    
+app = Flask(__name__)
 
-@app.route('/')          
+@app.route('/')
 def hello_world():
     return 'Hello World!'
 
-@app.route('/template')          
+@app.route('/template')
 def hello_template():
-    return render_template('index.html') 
+    return render_template('index.html')
 
-@app.route('/bye')          
+@app.route('/bye')
 def bye():
-    return 'Bye World!' 
+    return 'Bye World!'
 
-@app.route('/template_variable')          
+@app.route('/template_variable')
 def hello_template_variable():
     return render_template(
         'variables.html',
         name = "Cristóbal",
         age=26,
         times = 10
-        ) 
+        )
 
-@app.route('/hello/<name>')          
+@app.route('/hello/<name>')
 def hello_name(name):
     return "Hello "+name
 
-@app.route('/hello/<name>/<lastname>')          
+@app.route('/hello/<name>/<lastname>')
 def hello_name_lastname(name,lastname):
     return "Hello "+name+" "+lastname
 
@@ -39,13 +39,13 @@ def create_user():
     name_from_form = request.form['name']
     email_from_form = request.form['email']
     return render_template(
-        "show.html", 
-        name_on_template=name_from_form, 
+        "show.html",
+        name_on_template=name_from_form,
         email_on_template=email_from_form
     )
 
 
 
-    
-if __name__=="__main__":   
-    app.run(debug=True)    
+
+if __name__=="__main__":
+    app.run(debug=True)

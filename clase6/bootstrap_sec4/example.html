@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>caun94</title>
+  </head>
+  <body>
+
+    <nav id="navbar-example2" class="navbar navbar-light bg-light px-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">caun94</a>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#item1">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#item2">Peliculas Favoritas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#item3">Citas Favoritas</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example container" tabindex="0">
+    <h4 id="item1">About Me</h4>
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="/img/Foto_perfil.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Cristóbal Ugarte</h5>
+              <p class="card-text">Me gusta ver peliculas en el cine y el cine arte</p>
+              <p class="card-text"><small class="text-muted">-- Cristóbal Ugarte</small></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <h4 id="item2">Peliculas Favoritas</h4>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img style="height: 380px;" src="/img/58241.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img style="height: 380px;" src="/img/movie-nightcrawler-jake-gyllenhaal-wallpaper-preview.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img style="height: 380px;" src="/img/twbb.jpeg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <h4 id="item3" class="mt-4">Citas Favoritas</h4>
+      <div class="row">
+          <div class="col">
+              <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1" style="width: 100%;">
+                    Cita 1
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="modal1Label">Tyler Durden</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            “Only after disaster can we be resurrected. It's only after you've lost everything that you're free to do anything. Nothing is static, everything is evolving, everything is falling apart.”
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+          <div class="col">
+            <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2" style="width: 100%;">
+                  Cita 2
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+                  <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                      <h5 class="modal-title" id="modal2Label">Plan B</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          “Y en el proceso me pide un beso”
+                      </div>
+                      <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+        </div>
+          
+      </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
