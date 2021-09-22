@@ -1,0 +1,114 @@
+/*Globales*/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** Reset rems **/
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+h1 {
+    font-size: 3.8rem
+}
+
+h2 {
+    font-size: 3.4rem
+}
+
+h3 {
+    font-size: 3.0rem
+}
+
+h4 {
+    font-size: 2.6rem
+}
+
+img {
+    max-width: 100%;
+}
+
+.site-header{
+    background-image: url("../img/fondo.png");
+    background-position: center;
+    background-size: cover;
+    height: 50rem;
+    min-height: 20rem;
+    padding: 1rem 1rem 3rem 1rem;
+}
+
+.site-header:hover{
+    background-image: url("../img/fondo.png");
+}
+
+.content-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    max-width: 20rem;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navegation a{
+    font-size: 1.8rem;
+    margin-right: 1.4rem;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navegation a:hover{
+    color: white;
+    transition: 0.5s;
+}
+
+
+.contendor {
+    max-width: 120rem;
+    /* background-color: brown; */
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+.contendor h2 {
+    color: gray;
+    text-align: center;
+}
+
+.equipo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.persona {
+    width: 47%;
+    background-color: #00b5e2;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    justify-content: space-around;
+    margin: 0 auto 20 auto;
+}
+
+.persona h3 {
+    text-transform: uppercase;
+}
+
+.persona a {
+    color: black;
+    text-decoration: none;
+}
