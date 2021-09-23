@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEI101</title>
+    
+    <link rel="stylesheet" href="{{url_for('static',filename='css/normalize.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <main class="contendor">
+        <h2>{{persona[1]}}</h2>
+        <a href="/">Inicio</a>
+        <div class="equipo">
+            <section class="persona">
+                <img src="{{url_for('static',filename='img/'+persona[0]+'.png')}}" alt="Cris">
+                <h3>{{persona[2]}}</h3>
+                <p>{{persona[3]}}</p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

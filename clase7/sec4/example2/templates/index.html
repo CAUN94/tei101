@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEI101</title>
+    
+    <link rel="stylesheet" href="{{url_for('static',filename='css/normalize.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <header class="site-header content-header">
+        <div class="barra">
+            <img class="logo" src="{{url_for('static',filename='img/logo.png')}}" alt="logo">
+            <nav class="navegation">
+                <a href="#">Inicio</a>
+                <a href="#">Equipo</a>
+                <a href="#">Contacto</a>
+                <a href="/ejemplo.html">Otras Cosas</a>
+            </nav>
+        </div>
+        <h1>Equipo TEI101 2021</h1>
+    </header><!-- Este es el header -->
+    <main class="contendor">
+        <h2>¿Quienes somos?</h2>
+        <div class="equipo">
+            {% for i in range(count): %}
+                <section class="persona">
+                    <img src="{{url_for('static',filename='img/'+personas[i][0]+'.png')}}" alt="Cris">
+                    <a href="/persona/{{i}}"><h3>{{personas[i][1]}}</h3></a>
+                    <h4>{{personas[i][2]}}</h4>
+                    <p>{{personas[i][3]}}</p>
+                </section>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>
