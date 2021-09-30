@@ -26,6 +26,12 @@
                 <a href="/" class="navbar-item">
                     Inicio
                 </a>
+                {% if 'active' in session: %}
+                <a href="/panel" class="navbar-item">
+                    Panel
+                </a>
+                {% endif %}
+
             
                 <a href="/nosotros" class="navbar-item">
                     Nosotros
@@ -34,19 +40,29 @@
                 <a href="#" class="navbar-item">
                     Otros
                 </a>
-            
+
+                
                 </div>
             
                 <div class="navbar-end">
                 <div class="navbar-item">
-                    <div class="buttons">
-                    <a href="/registrarme" class="button is-success">
-                        <strong>Registrarme</strong>
-                    </a>
-                    <a href="/ingresar" class="button is-light">
-                        Inicia Sesión
-                    </a>
-                    </div>
+                    {% if 'active' in session: %}
+                        <a href="#" class="navbar-item">
+                            {{session['name']}}
+                        </a>
+                        <a href="/salir" class="navbar-item">
+                            Salir
+                        </a>
+                    {% else: %}
+                        <div class="buttons">
+                        <a href="/registrarme" class="button is-success">
+                            <strong>Registrarme</strong>
+                        </a>
+                        <a href="/ingresar" class="button is-light">
+                            Inicia Sesión
+                        </a>
+                        </div>
+                    {% endif %}
                 </div>
                 </div>
             </div>
