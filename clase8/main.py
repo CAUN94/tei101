@@ -42,7 +42,7 @@ def create_user():
             session['active'] = True
             return redirect('/panel')
     flash('Error en Email o Clave')
-    return redirect("/ingresar")	
+    return redirect("/ingresar")
 
 @app.route('/salir')
 def logout():

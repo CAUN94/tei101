@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="columns mt-3">
+    <div class="column is-two-thirds is-offset-one-fifth">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="box">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form action="/register-user" method="POST" class="box">
+        <div class="field">
+            <label class="label">Nombre y Apellido</label>
+            <div class="control">
+                <input class="input" name="name" type="text" placeholder="username" required>
+            </div>
+            </div>
+        <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+            <input class="input" name="email" type="email" placeholder="e.g. jon@doe.com" required>
+        </div>
+        </div>
+
+        <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+            <input class="input" name="pass" type="password" placeholder="********" required>
+        </div>
+        </div>
+        <div class="field">
+            <label class="label">Confirm Password</label>
+            <div class="control">
+                <input class="input" type="password" placeholder="********" required>
+            </div>
+            </div>
+
+        <button class="button is-primary">Registrarme</button>
+    </form>
+    </div>
+</div>
+{% endblock %}
