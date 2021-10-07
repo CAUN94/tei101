@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}Registro{% endblock %}
+
+{% block body %}
+<div class="columns">
+  <div class="column is-three-fifths is-offset-one-fifth">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        
+        {% for message in messages %}
+          <div class="box">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  </div>
+</div>
+<div class="columns">
+    <div class="column is-three-fifths is-offset-one-fifth">
+        <form action="registrar" method="POST" class="box">
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input class="input" type="text" name="name" placeholder="Nombre y Apellido" required>
+              </div>
+            </div>
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                  <input class="input" type="email" name="email" placeholder="e.j juan@perez.com" required>
+                </div>
+              </div>
+            <div class="field">
+              <label class="label">Clave</label>
+              <div class="control">
+                <input class="input" type="password" name="pass" placeholder="********" required>
+              </div>
+            </div>
+            <div class="field">
+                <label class="label">Confirmar Clave</label>
+                <div class="control">
+                  <input class="input" type="password" name="cpass" placeholder="********" required>
+                </div>
+              </div>
+          
+            <button class="button is-primary">Sign in</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
