@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+{% block title %}Registro{% endblock %}
+{% block body %}
+<div class="columns">
+    <div class="column is-one-third">
+        <article class="panel is-success">
+            <p class="panel-heading">
+              Temas
+            </p>
+            <a class="panel-block is-active">
+              <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </span>
+              Todos
+            </a>
+            <a class="panel-block">
+              <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </span>
+              marksheet
+            </a>
+            <a class="panel-block">
+              <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </span>
+              minireset.css
+            </a>
+            <a class="panel-block">
+              <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </span>
+              jgthms.github.io
+            </a>
+        </article>
+    </div>
+    <div class="column">
+      <div class="columns">
+        {% for comment in comments %}
+            <div class="column">
+                <div class="box m-1">
+                    <article class="media">
+                        <div class="media-left">
+                        <figure class="image is-64x64">
+                            <img src="https://i.pravatar.cc/500?u={{comment['user_id']}}" alt="Image">
+                        </figure>
+                        </div>
+                        <div class="media-content">
+                        <div class="content">
+                            <p>
+                            <strong>{{ users[-comment['user_id']]['name']}}</strong>
+                            <small>@{{ users[-comment['user_id']]['name'].replace(" ", "")}}</small>
+                            <br>
+                            {{ comment['comment'] }}
+                            </p>
+                        </div>
+                        <nav class="level is-mobile">
+                            <div class="level-left">
+                            <a class="level-item" aria-label="reply">
+                                <span class="icon is-small">
+                                <i class="fas fa-reply" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                            <a class="level-item" aria-label="retweet">
+                                <span class="icon is-small">
+                                <i class="fas fa-retweet" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                            <a class="level-item" aria-label="like">
+                                <span class="icon is-small">
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                            </div>
+                        </nav>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            {% if loop.index == 1 %}
+              </div>
+              <div class="columns">
+            {% elif loop.index%2  != 0 %}
+                </div>
+                <div class="columns">
+            
+            {% endif %}
+            {% endfor %}
+      </div>
+    </div>
+</div>
+
+{% endblock %}

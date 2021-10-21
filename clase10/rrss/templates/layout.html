@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RRSS Sustentable {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  </head>
+  <body>
+    <div class="container">  
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <span class="has-text-success is-size-4">RRSS Sustentable</span>
+            </a>
+        
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+            </div>
+        
+            <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item">
+                    Inicio
+                </a>
+
+                {% if 'active' in session: %}
+                <a href="/panel" class="navbar-item">
+                    Panel
+                </a>
+                {% endif %}
+        
+                <a href="/nosotros" class="navbar-item">
+                    Nosotros
+                </a>
+            </div>
+        
+            <div class="navbar-end">
+                <div class="navbar-item">
+                {% if 'active' in session: %}
+                    <a href="/" class="navbar-item">
+                        {{session['name']}}
+                    </a>
+                    <a href="/salir" class="navbar-item">
+                        Salir
+                    </a>
+                {% else :%}
+                    <div class="buttons">
+                        <a href="/registrarme" class="button is-success">
+                        <strong>Registrarme</strong>
+                        </a>
+                        <a href="/ingresar" class="button is-light">
+                            Ingresar
+                        </a>
+                    </div>
+                {% endif %}
+                </div>
+            </div>
+            </div>
+        </nav>
+        
+        {% block body %}{% endblock %}
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+{% block title %}Registro{% endblock %}
+{% block body %}
+<div class="columns">
+    <div class="column is-one-third">
+        <article class="panel is-success">
+            <p class="panel-heading">
+              {% if filter != '*' %}
+                {{filter}}
+              {% else %}
+                Temas
+              {% endif %}
+            </p>
+            <a href="/panel" class="panel-block is-active">
+              <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </span>
+              Todos
+            </a>
+            {% for category in categorys %}
+            <a href="/panel?filter={{category}}" class="panel-block">
+              <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </span>
+              {{category}}
+            </a>
+            {% endfor %}
+        </article>
+
+        <article class="panel is-success">
+          <p class="panel-heading">
+            Ejemplo
+          </p>
+          <form action="/comment" method="POST">
+            <div class="panel-block">
+              <textarea name="comment" class="textarea" placeholder="Comentario"></textarea>
+            </div>
+            <div class="panel-block">
+              <div class="select is-fullwidth">
+                <select name="category">
+                  {% for category in categorys %}
+                    <option value="{{category}}">{{category}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="panel-block">
+                <button type="submit"  class="button is-fullwidth">Publicar</button>
+              </div>
+            </div>
+          </form>
+
+      </article>
+    </div>
+    <div class="column">
+      <div class="columns">
+        {% for comment in comments %}
+            <div class="column">
+                <div class="box m-1">
+                    <article class="media">
+                        <div class="media-left">
+                        <figure class="image is-64x64">
+                            <img src="https://i.pravatar.cc/500?u={{comment['user_id']}}" alt="Image">
+                        </figure>
+                        </div>
+                        <div class="media-content">
+                          <div class="content">
+                              <p>
+                                <strong>{{ users[-comment['user_id']]['name']}}</strong>
+                                <small>@{{ users[-comment['user_id']]['name'].replace(" ", "")}}</small>
+                                <br>
+                                {{ comment['comment'] }}
+                                <br>
+                                {% if session['id'] == comment['user_id'] %}
+                                  <a href="/comment/delete/{{comment['id']}}" 
+                                class="has-text-danger">Borrar</a>
+                                {% endif %}
+                                </p>
+                          </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            {% if loop.index == 1 %}
+              </div>
+              <div class="columns">
+            {% elif loop.index%2  != 0 %}
+                </div>
+                <div class="columns">
+            
+            {% endif %}
+            {% endfor %}
+      </div>
+    </div>
+</div>
+
+{% endblock %}
